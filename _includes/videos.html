@@ -1,0 +1,19 @@
+<section id="video">
+  <div class="section-title">Video</div>
+
+  <div class="section-content">
+    <div class="inline-videos clearfix">
+      {% assign inline_videos = (site.data.videos | where: "inline", "TRUE") %}
+      {% for video in inline_videos %}
+        {% include video.html video=video %}
+      {% endfor %}
+    </div>
+
+    <div class="block-videos">
+      {% assign block_videos = (site.data.videos | where: "inline", "FALSE") %}
+      {% for video in block_videos %}
+        {% include video.html video=video %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

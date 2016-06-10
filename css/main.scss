@@ -1,0 +1,253 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#content {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Impact, 'Arial Black', 'sans serif';
+  padding-top: 40px;
+  padding-bottom: 30px;
+  color: black;
+
+  a {
+    color: black;
+    text-decoration: none;
+    outline: none;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+
+  section {
+    margin-top: 30px;
+    border: 0px;
+    padding: 0px;
+    text-align: left;
+  }
+
+  .section-content {
+    margin-top: 20px;
+  }
+
+  #poetry {
+    // padding-top: 10px;
+  }
+
+  .line {
+    margin-top: 0px;
+    display: block;
+
+    .line-title {
+      font-size: 22px;
+    }
+
+    .line-subtitle {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      font-style: italic;
+      margin-left: 10px;
+    }
+  }
+
+  .nav-container {
+    height: 50px;
+  }
+
+  #nav {
+    display: inline;
+    padding: 5px;
+    padding-bottom: 0px;
+    float: right;
+    margin-top: 20px;
+
+    li {
+      display: inline;
+      font-size: 19px;
+      list-style-type: none;
+      padding-left: 8px;
+    }
+  }
+
+  #video {
+    .inline-videos {
+      .video {
+        display: inline-block;
+        float: left;
+        margin-left: 10px;
+        height: 146px;
+
+        &:first-of-type {
+          margin-left: 0px;
+        }
+      }
+    }
+
+    .block-videos {
+      margin-top: 10px;
+    }
+  }
+
+  #photos {
+    .first-photo {
+      margin-bottom: 12px;
+    }
+
+    .photo {
+      width: 648px;
+    }
+
+    .photo-series {
+      display: none;
+    }
+
+    .great-northern-link {
+      position: relative;
+      display: inline-block;
+      height: 432px;
+    }
+
+    .great-northern-title {
+      font-size:   45px;
+      line-height: 45px;
+      color: white;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+  }
+
+  .contact-overlay {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    z-index: 100;
+
+    .contact-container {
+      margin-left: auto;
+      margin-right: auto;
+      width: 450px;
+      background-color: white;
+      border-radius: 3px;
+      border: 1px solid black;
+      padding: 20px;
+      margin-top: 5%;
+    }
+
+    .contact-links {
+      font-size:16px;
+      margin-top: 10px;
+
+      a {
+        margin-right: 5px;
+      }
+    }
+
+    .message-email, .message-text {
+      font-size: 14px;
+    }
+
+    .message-email {
+      display: block;
+      height: 30px;
+      border: none;
+      outline: none;
+      background-color: #eeeeee;
+      width: 100%;
+      padding: 5px;
+    }
+
+    .message-text {
+      display: block;
+      margin-top: 20px;
+      height: 140px;
+      resize: none;
+      border: none;
+      outline: none;
+      background-color: #eeeeee;
+      width: 100%;
+      padding: 5px;
+    }
+
+    .email-button {
+      width: 100%;
+      height: 34px;
+      padding: 0px;
+      background-color: #ccc;
+      border: none;
+      font-size: 14px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      outline: none;
+    }
+   }
+
+  #about, #bio {
+    p {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+  }
+
+  #shock {
+    p {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    .interview-question {
+      font-style: italic;
+      font-weight: bold;
+    }
+  }
+}
+
+.lb-data .lb-details {
+  display: none;
+}
+
+#main {
+  .name-img {
+    height: 50px;
+  }
+
+  .title-img-container {
+    position: relative;
+  }
+
+  .margin-img {
+    display: inline-block;
+    position: absolute;
+    left: -30px;
+  }
+
+  .title-img {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .horizontal-img {
+    width: 100%;
+  }
+}
+

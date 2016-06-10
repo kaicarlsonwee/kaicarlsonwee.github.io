@@ -1,0 +1,16 @@
+<section id="poetry">
+  <div class='section-title'>Poetry</div>
+  <div class='section-content'>
+    {% for poem in site.data.poetry %}
+      <a href='{{ poem.url }}' target="_blank" class="line">
+        <span class="line-title">
+          {{ poem.title }}
+        </span>
+
+        <span class="line-subtitle">
+          {{ poem.publisher }}
+        </span>
+      </a>
+    {% endfor %}
+  </div>
+</section>

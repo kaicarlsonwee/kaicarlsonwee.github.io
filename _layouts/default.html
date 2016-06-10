@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+
+  <body>
+    <img style="display:none;" src="{{ site.url }}/assets/title.jpg">
+
+    <div id='content'>
+      {% include header.html %}
+      {{ content }}
+    </div>
+  </body>
+</html>
