@@ -1,13 +1,13 @@
 <section id="poetry">
   <div class='section-title'>Poetry</div>
-  <div class='section-content'>
+  <div class='section-content clearfix'>
     {% for poem in site.data.poetry %}
-      <a href='{{ poem.url }}' target="_blank" class="line">
-        <span class="line-title">
+      <a href='{{ poem.url }}' target="_blank" class="entry">
+        <span class="entry-title">
           {{ poem.title }}
         </span>
 
-        <span class="line-subtitle">
+        <span class="entry-subtitle">
           {{ poem.publisher }}
         </span>
       </a>

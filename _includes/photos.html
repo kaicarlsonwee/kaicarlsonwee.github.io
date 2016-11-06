@@ -1,0 +1,16 @@
+<section id='photos'>
+  <div class='section-title'>Photos</div>
+  <div class='section-content'>
+    <div class='photo-series badlands'>
+    {% for number in (1..42) %}
+       <a href="assets/photos/badlands/{{ number }}.jpg" data-lightbox="great-northern"></a>
+    {% endfor %}
+    </div>
+
+    <div class='photo-series great-northern'>
+      {% for number in (1..42) %}
+         <a href="assets/photos/great-northern/{{ number }}.jpg" data-lightbox="great-northern"></a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

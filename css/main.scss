@@ -49,19 +49,26 @@ html, body {
     // padding-top: 10px;
   }
 
-  .line {
+  .entry {
     margin-top: 0px;
     display: block;
+    margin-bottom: 10px;
+    float: left;
+    width: 50%;
 
-    .line-title {
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+
+    .entry-title {
       font-size: 22px;
     }
 
-    .line-subtitle {
+    .entry-subtitle {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 14px;
+      font-size: 13px;
       font-style: italic;
-      margin-left: 10px;
+      margin-left: 3px;
     }
   }
 

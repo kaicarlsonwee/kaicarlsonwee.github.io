@@ -1,0 +1,15 @@
+<section id='interviews'>
+  <div class='section-title'>Interviews</div>
+  <div class='section-content clearfix'>
+    {% for interview in site.data.interviews %}
+      <a href='{{ interview.url }}' target='_blank' class='entry'>
+        <span class='entry-title'>
+          {{ interview.title }}
+        </span>
+        <span class='entry-subtitle'>
+          on {{ interview.topics }}
+        </span>
+      </a>
+    {% endfor %}
+  </div>
+</section>
