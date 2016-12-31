@@ -30,7 +30,17 @@ html, body {
   }
 
   .section-title {
-    font-size: 30px;
+      margin-left: -80px;
+
+      .section-title-inner {
+        padding-left: 55px;
+        padding-right: 10px;
+        color: white;
+        background-color: black;
+        font-size: 30px;
+        display: inline-block;
+        width: auto;
+      }
   }
 
 
@@ -234,8 +244,13 @@ html, body {
 }
 
 #main {
+  position: relative;
+
   .name-img {
     height: 50px;
+    margin-left: -58px;
+    position: relative;
+    top: 2px;
   }
 
   .title-img-container {
@@ -258,3 +273,22 @@ html, body {
   }
 }
 
+.social-media-list {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+
+  img {
+    height: 30px;
+  }
+
+  &.sm-vertical {
+    position: absolute;
+    right: -50px;
+    top: 0px;
+
+    li {
+      margin-bottom: 4px;
+    }
+  }
+}
