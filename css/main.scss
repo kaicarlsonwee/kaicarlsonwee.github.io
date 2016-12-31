@@ -82,22 +82,24 @@ html, body {
     }
   }
 
-  .nav-container {
-    height: 50px;
+  #nav-container {
+    position: relative;
   }
 
   #nav {
     display: inline;
-    padding: 5px;
-    padding-bottom: 0px;
-    float: right;
-    margin-top: 20px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px;
+    margin-bottom: 4px;
 
     li {
       display: inline;
       font-size: 19px;
       list-style-type: none;
       padding-left: 8px;
+      margin-left: 15px;
     }
   }
 
@@ -273,6 +275,34 @@ html, body {
   }
 }
 
+section#footer{
+  text-align: center;
+
+  .copyright {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+}
+
+section#extra {
+  .section-content {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+  }
+
+  .attribution {
+    margin-left: 30px;
+  }
+}
+
+section#email {
+  .section-content {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+  }
+}
+
 .social-media-list {
   list-style-type: none;
   margin: 0px;
@@ -289,6 +319,17 @@ html, body {
 
     li {
       margin-bottom: 4px;
+    }
+  }
+
+  &.sm-horizontal {
+    ul {
+      display: inline-block;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 4px;
     }
   }
 }

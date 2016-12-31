@@ -9,38 +9,24 @@
       <li><a href="/#poetry" class="nav-link">Poetry</a></li>
       <li><a href="https://www.youtube.com/watch?v=NwNuQulK6N0" target="_blank">Books</a></li>
       <li><a href="/#video" class="nav-link">Media</a></li>
+      <li><a href="/extra" class="nav-link">Extra</a></li>
+      <li><a href="/contact" class="nav-link">Contact</a></li>
     </ul>
   </div>
 
   <div class="title-img-container">
     <img src="/assets/xx-vertical.jpg" class="margin-img">
-    <img src="/assets/title-img/{{ page.main_img }}">
+    {% if page.main_img_link %}
+      <a href='{{ page.main_img_link }}'>
+        <img src="/assets/title-img/{{ page.main_img }}">
+      </a>
+    {% else %}
+      <img src="/assets/title-img/{{ page.main_img }}">
+    {% endif %}
     <img src="/assets/xx-horizontal.jpg" class="horizontal-img">
 
     <ul class='social-media-list sm-vertical'>
-      <li>
-        <a href='https://www.facebook.com/kai.carlsonwee'>
-          <img src='/assets/icons/facebook.png'></img>
-        </a>
-      </li>
-
-      <li>
-        <a href='https://www.instagram.com/kaicarlsonwee/'>
-          <img src='/assets/icons/instagram.png'></img>
-        </a>
-      </li>
-
-      <li>
-        <a href='https://vimeo.com/user9234672'>
-          <img src='/assets/icons/youtube.png'></img>
-        </a>
-      </li>
-
-      <li>
-        <a href='https://twitter.com/kaicarlsonwee'>
-          <img src='/assets/icons/twitter.png'></img>
-        </a>
-      </li>
+      {% include social_media_list.html %}
     </ul>
   </div>
 </section>
