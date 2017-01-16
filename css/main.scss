@@ -242,3 +242,54 @@ section#email {
     }
   }
 }
+
+$basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+#books {
+  .book-container {
+    display: inline-block;
+    margin-right: 36px;
+    vertical-align: text-top;
+
+    &:last-of-type {
+      margin-right: 0px;
+    }
+
+    img {
+      display: block;
+    }
+
+    .book-description {
+      font-family: $basicFont;
+      font-size: 10pt;
+      text-align: center;
+
+      a {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.poem-section {
+  .poem-title, p {
+    font-family: $basicFont;
+  }
+
+  .poem-title {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 11pt;
+  }
+
+  .epigraph {
+    font-size: 9pt;
+    padding: 10px 50px;
+  }
+
+  .attribution {
+    padding-left: 50px;
+  }
+}
