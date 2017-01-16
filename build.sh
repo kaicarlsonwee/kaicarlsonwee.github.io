@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# Takes a name (e.g. badlands), and builds an almost functional js list of the image dimensions
+
 function buildjsfile(){
   local outputName="$1"
 
