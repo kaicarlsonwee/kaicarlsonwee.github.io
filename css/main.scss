@@ -3,6 +3,8 @@
 ---
 @charset "utf-8";
 
+$basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
 html, body {
   height: 100%;
   width: 100%;
@@ -42,7 +44,6 @@ html, body {
         width: auto;
       }
   }
-
 
   section {
     margin-top: 30px;
@@ -132,11 +133,11 @@ html, body {
     }
   }
 
-  // #about, #bio {
-  //   p {
-  //     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  //   }
-  // }
+  #about, #bio, #cv {
+     .section-content {
+       font-family: $basicFont; 
+     }
+   }
 
   // #shock {
   //   p {
@@ -168,6 +169,11 @@ html, body {
     position: relative;
   }
 
+  .title-img {
+    width: 800px;
+    height: 530px;
+  }
+
   .margin-img {
     display: inline-block;
     position: absolute;
@@ -189,7 +195,7 @@ section#footer{
 
   .copyright {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 5px;
   }
 }
@@ -243,7 +249,6 @@ section#email {
   }
 }
 
-$basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 #books {
   .book-container {
@@ -291,5 +296,16 @@ $basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   .attribution {
     padding-left: 50px;
+  }
+}
+
+.interview-section {
+  p {
+    font-family: $basicFont;
+  }
+
+  .interview-question {
+    font-weight: bold;
+    font-style: italic;
   }
 }
