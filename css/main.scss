@@ -109,7 +109,7 @@ $basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
 
     .entry-subtitle {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: $basicFont; 
       font-size: 13px;
       font-style: italic;
       margin-left: 3px;
@@ -297,7 +297,7 @@ section#footer{
   text-align: center;
 
   .copyright {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: $basicFont; 
     font-size: 12px;
     margin-top: 5px;
   }
@@ -305,7 +305,7 @@ section#footer{
 
 section#extra {
   .section-content {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: $basicFont;
     font-size: 14px;
   }
 
@@ -316,7 +316,7 @@ section#extra {
 
 section#email {
   .section-content {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: $basicFont;
     font-size: 18px;
   }
 }
