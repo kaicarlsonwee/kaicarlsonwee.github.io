@@ -5,10 +5,34 @@
 
 $basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-html, body {
-  height: 100%;
-  width: 100%;
+@mixin responsive($size:default, $constrain:false) {
+  @if $size == xs {
+    @media (max-width: 767px) { @content; }
+  }
+  @else if $size == sm {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $size == md {
+    @media (min-width: 992px) { @content; }
+  }
+  @else if $size == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+  @else if $size == xl {
+    @media (min-width: 1700px)  { @content; }
+  }
+  @else if $size == default {
+    @content;
+  }
+  @else {
+    @media (min-width: #{$size}) { @content; }
+  }
 }
+
+//html, body {
+//  height: 100%;
+//  width: 100%;
+//}
 
 .clearfix:after {
   content: "";
@@ -17,43 +41,54 @@ html, body {
 }
 
 #content {
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  .section-title {
+    .section-title-inner {
+      padding-left: 10px;
+      padding-right: 10px;
+      color: white;
+      background-color: black;
+      font-size: 30px;
+      display: inline-block;
+      width: auto;
+    }
+  }
+
+  @include responsive(lg) {
+    .section-title {
+      margin-left: -80px;
+
+      .section-title-inner {
+        padding-left: 55px;      
+      }
+    }
+  }
+
+  section {
+    border: 0px;
+    padding: 0px;
+    text-align: left;
+    margin-top: 30px;
+  }
+
+  .section-content {
+    margin-top: 20px;
+  }
+
+ @include responsive(sm) {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
   font-family: Impact, 'Arial Black', 'sans serif';
-  padding-top: 40px;
-  padding-bottom: 30px;
   color: black;
 
   a {
     color: black;
     text-decoration: none;
     outline: none;
-  }
-
-  .section-title {
-      margin-left: -80px;
-
-      .section-title-inner {
-        padding-left: 55px;
-        padding-right: 10px;
-        color: white;
-        background-color: black;
-        font-size: 30px;
-        display: inline-block;
-        width: auto;
-      }
-  }
-
-  section {
-    margin-top: 30px;
-    border: 0px;
-    padding: 0px;
-    text-align: left;
-  }
-
-  .section-content {
-    margin-top: 20px;
   }
 
   #poetry {
@@ -64,8 +99,6 @@ html, body {
     margin-top: 0px;
     display: block;
     margin-bottom: 10px;
-    float: left;
-    width: 50%;
 
     &:last-of-type {
       margin-bottom: 0px;
@@ -81,6 +114,19 @@ html, body {
       font-style: italic;
       margin-left: 3px;
     }
+
+    .entry-title, .entry-subtitle {
+      display: block;
+    }
+
+    @include responsive(sm) {
+      width: 50%;
+      float: left;
+
+      .entry-title, .entry-subtitle {
+        display: inline;
+      }
+    }
   }
 
   #nav-container {
@@ -88,67 +134,102 @@ html, body {
   }
 
   #nav {
-    display: inline;
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    margin: 0px;
-    margin-bottom: 4px;
+    padding-left: 0px;
+    position: static;
+    text-align: justify;
+    width: 100%;
+    height: 23px;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 100%;    
+    }
 
     li {
       display: inline;
       font-size: 19px;
       list-style-type: none;
-      padding-left: 8px;
-      margin-left: 15px;
     }
-  }
+
+    @include responsive(sm) {
+      display: inline;
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      margin: 0px;
+      margin-bottom: 4px;
+      padding-left: 40px;
+      width: auto;
+
+      li {
+        padding-left: 8px;
+        margin-left: 15px; 
+      }
+
+      &:after {
+        width: auto;
+      }
+    }
+ }
 
   #video {
-    .inline-videos {
+    .block-videos, .inline-videos {
       .video {
-        display: inline-block;
-        float: left;
-        margin-left: 10px;
-        height: 146px;
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
 
-        &:first-of-type {
-          margin-left: 0px;
+        img {
+          width: 100%;
+          display: inline-block;
         }
       }
     }
 
-    .block-videos {
-      margin-top: 10px;
-    }
-  }
+    @include responsive(sm) {
+      .inline-videos {
+        .video {
+          display: inline-block;
+          float: left;
+          margin-left: 10px;
+          height: 146px;
+          margin-top: 0px;
+          width: auto;
+
+          &:first-of-type {
+            margin-left: 0px;
+          }
+        }
+      }
+   }
+ }
 
   #photos {
     .photo-series {
       display: block;
+      width: 100%;
+      
+      img {
+        width: 100%;
+      }
 
       &.badlands {
         margin-bottom: 10px;
+      }
+
+      @include responsive(sm) {
+        width: auto;
       }
     }
   }
 
   #about, #bio, #cv {
      .section-content {
-       font-family: $basicFont; 
+       font-family: $basicFont;
      }
    }
-
-  // #shock {
-  //   p {
-  //     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  //   }
-
-  //   .interview-question {
-  //     font-style: italic;
-  //     font-weight: bold;
-  //   }
-  // }
 }
 
 .lb-data .lb-details {
@@ -159,31 +240,44 @@ html, body {
   position: relative;
 
   .name-img {
-    height: 50px;
-    margin-left: -58px;
-    position: relative;
-    top: 2px;
-  }
+    height: 65px;
+    display: inline-block;
+
+    @include responsive(sm) {
+      height: 50px;
+      margin-left: -58px;
+      position: relative;
+      top: 2px;
+    }
+ }
 
   .title-img-container {
     position: relative;
   }
 
   .title-img {
-    width: 800px;
-    height: 530px;
+    width: 100%;
+    height: auto;
+
+    @include responsive(sm) {
+      width: 800px;
+    }
   }
 
   .margin-img {
-    display: inline-block;
+    display: none;
     position: absolute;
     left: -30px;
-  }
+ 
+    @include responsive(sm) {
+      display: inline-block;
+    }    
+ }
 
-  .title-img {
-    width: 100%;
-    display: inline-block;
-  }
+  //.title-img {
+    //width: 100%;
+    //display: inline-block;
+  //}
 
   .horizontal-img {
     width: 100%;
@@ -228,9 +322,13 @@ section#email {
   }
 
   &.sm-vertical {
-    position: absolute;
-    right: -50px;
-    top: 0px;
+    display: none;
+    @include responsive(sm) {
+      display: block;
+      position: absolute;
+      right: -50px;
+      top: 0px;
+    }
 
     li {
       margin-bottom: 4px;
@@ -252,16 +350,12 @@ section#email {
 
 #books {
   .book-container {
-    display: inline-block;
-    margin-right: 36px;
-    vertical-align: text-top;
-
-    &:last-of-type {
-      margin-right: 0px;
-    }
+    display: block;
+    text-align: center;
+    width: 100%;  
 
     img {
-      display: block;
+      display: inline-block;
     }
 
     .book-description {
@@ -271,6 +365,17 @@ section#email {
 
       a {
         font-weight: bold;
+      }
+    }
+
+    @include responsive(sm) {
+      display: inline-block;
+      text-align: left;
+      vertical-align: text-top;
+      margin-right: 36px;
+
+      &:last-of-type {
+        margin-right: 0px;
       }
     }
   }
