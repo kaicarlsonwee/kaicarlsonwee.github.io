@@ -267,6 +267,7 @@ $basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
     @include responsive(sm) {
       width: 800px;
+      height: 530px;
     }
   }
 
