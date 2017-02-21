@@ -240,11 +240,13 @@ $basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   position: relative;
 
   .name-img {
-    height: 65px;
+    width: 100%;
+    height: auto;
     display: inline-block;
 
     @include responsive(sm) {
       height: 50px;
+      width: auto;
       margin-left: -58px;
       position: relative;
       top: 2px;
@@ -274,13 +276,20 @@ $basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }    
  }
 
-  //.title-img {
-    //width: 100%;
-    //display: inline-block;
-  //}
-
-  .horizontal-img {
+ .horizontal-img {
     width: 100%;
+  }
+
+}
+
+.low-contact {
+  img {
+    display: inline-block;
+    width: 100%;
+
+    @include responsive(sm) {
+      width: auto;
+    }
   }
 }
 
