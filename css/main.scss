@@ -225,11 +225,19 @@ $basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
   }
 
-  #about, #bio, #cv {
+  #about, #bio {
      .section-content {
        font-family: $basicFont;
      }
    }
+
+  #cv .cv-section {
+    font-family: $basicFont;
+
+    :first-of-type {
+      margin-top: 15px;
+    }
+  }
 }
 
 .lb-data .lb-details {
