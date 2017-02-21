@@ -244,6 +244,10 @@ $basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     height: auto;
     display: inline-block;
 
+    img {
+      width: 100%;
+    }
+
     @include responsive(sm) {
       height: 50px;
       width: auto;
