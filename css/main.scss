@@ -58,7 +58,7 @@ $basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       margin-left: -80px;
 
       .section-title-inner {
-        padding-left: 55px;      
+        padding-left: 55px;
       }
     }
   }
@@ -82,7 +82,7 @@ $basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     padding-bottom: 30px;
   }
 
-  font-family: Impact, "Arial Black", "Arial Bold", Gadget, sans-serif; 
+  font-family: Impact, "Arial Black", "Arial Bold", Gadget, sans-serif;
   color: black;
 
   a {
@@ -109,7 +109,7 @@ $basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
 
     .entry-subtitle {
-      font-family: $basicFont; 
+      font-family: $basicFont;
       font-size: 13px;
       font-style: italic;
       margin-left: 3px;
@@ -143,7 +143,7 @@ $basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     &:after {
       content: "";
       display: inline-block;
-      width: 100%;    
+      width: 100%;
     }
 
     li {
@@ -164,7 +164,7 @@ $basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
       li {
         padding-left: 8px;
-        margin-left: 15px; 
+        margin-left: 15px;
       }
 
       &:after {
@@ -210,7 +210,7 @@ $basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     .photo-series {
       display: block;
       width: 100%;
-      
+
       img {
         width: 100%;
       }
@@ -231,13 +231,25 @@ $basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
      }
    }
 
-  #cv .cv-section {
-    font-family: $basicFont;
+  #cv {
+    .cv-section {
+      font-family: $basicFont;
 
-    :first-of-type {
-      margin-top: 15px;
+      :first-of-type {
+        margin-top: 15px;
+      }
+    }
+
+    .cv-section-content {
+      padding-left: 0px;
+      list-style-type: none;
+
+      li {
+        margin-top: 5px;
+      }
     }
   }
+
 }
 
 .lb-data .lb-details {
@@ -283,10 +295,10 @@ $basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     display: none;
     position: absolute;
     left: -30px;
- 
+
     @include responsive(sm) {
       display: inline-block;
-    }    
+    }
  }
 
  .horizontal-img {
@@ -310,7 +322,7 @@ section#footer{
   text-align: center;
 
   .copyright {
-    font-family: $basicFont; 
+    font-family: $basicFont;
     font-size: 12px;
     margin-top: 5px;
   }
@@ -374,7 +386,12 @@ section#email {
   .book-container {
     display: block;
     text-align: center;
-    width: 100%;  
+    width: 100%;
+    margin-top: 30px;
+
+    &:first-of-type {
+      margin-top: 0px;
+    }
 
     img {
       display: inline-block;
@@ -395,6 +412,8 @@ section#email {
       text-align: left;
       vertical-align: text-top;
       margin-right: 36px;
+      width: auto;
+      margin-top: 0px;
 
       &:last-of-type {
         margin-right: 0px;
