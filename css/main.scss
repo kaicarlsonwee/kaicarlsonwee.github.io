@@ -229,27 +229,33 @@ $basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
      .section-content {
        font-family: $basicFont;
      }
+
+     .about-paragraph, .bio-paragraph {
+        line-height: 1.4em;
+        text-align: justify;
+     }
    }
 
   #cv {
     .cv-section {
       font-family: $basicFont;
 
-      :first-of-type {
+      .cv-section-content {
         margin-top: 15px;
+
+        padding-left: 0px;
+        list-style-type: none;
+
+        li {
+          margin-top: 5px;
+        }
       }
-    }
 
-    .cv-section-content {
-      padding-left: 0px;
-      list-style-type: none;
-
-      li {
-        margin-top: 5px;
+      .cv-section-title {
+        margin-top: 30px;
       }
     }
   }
-
 }
 
 .lb-data .lb-details {
@@ -393,7 +399,7 @@ section#email {
       margin-top: 0px;
     }
 
-    img {
+    a.book-link {
       display: inline-block;
     }
 
@@ -435,23 +441,39 @@ section#email {
     font-size: 11pt;
   }
 
-  .epigraph {
-    font-size: 9pt;
-    padding: 10px 50px;
-  }
-
   .attribution {
     padding-left: 50px;
+  }
+
+  &.the-fog-and-the-sound {
+    .epigraph {
+      font-size: 9pt;
+      padding: 10px 100px 10px 50px;
+    }
+
+    p {
+      line-height: 1.4em;
+      text-align: justify;
+      padding-right: 100px;
+    }
   }
 }
 
 .interview-section {
   p {
     font-family: $basicFont;
+    line-height: 1.4em;
+    text-align: justify;
   }
 
   .interview-question {
     font-weight: bold;
     font-style: italic;
+
+    margin-top: 30px;
+
+    &:first-of-type {
+      margin-top: 0px;
+    }
   }
 }
