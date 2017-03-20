@@ -148,8 +148,14 @@ $basicFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
     li {
       display: inline;
-      font-size: 19px;
+      font-size: 15px;
       list-style-type: none;
+    }
+
+    @include responsive(md) {
+      li {
+        font-size: 19px;
+      }
     }
 
     @include responsive(sm) {
