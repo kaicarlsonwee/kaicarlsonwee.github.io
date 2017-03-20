@@ -448,13 +448,22 @@ section#email {
   &.the-fog-and-the-sound {
     .epigraph {
       font-size: 9pt;
-      padding: 10px 100px 10px 50px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 50px;
+      padding-right: 0px;
     }
 
-    p {
-      line-height: 1.4em;
-      text-align: justify;
-      padding-right: 100px;
+    @include responsive(lg) {
+      .epigraph {
+        padding-right: 100px;
+      }
+
+      p {
+        line-height: 1.4em;
+        text-align: justify;
+        padding-right: 100px;
+      }
     }
   }
 }
